@@ -85,10 +85,19 @@ return require("packer").startup(function(use)
   use "romgrk/barbar.nvim"
 
   use {
+    "folke/trouble.nvim",
+    requires = { "nvim-tree/nvim-web-devicons" },
+  }
+  use {
     "kdheepak/lazygit.nvim",
     -- optional for floating window border decoration
     requires = {
       "nvim-lua/plenary.nvim",
     },
+  }
+
+  use {
+    "kosayoda/nvim-lightbulb",
+    requires = "antoinemadec/FixCursorHold.nvim",
   }
 end)
