@@ -10,9 +10,14 @@ local function telescope_buffer_dir()
 end
 
 telescope.setup {
+  pickers = {
+    colorscheme = {
+      enable_preview = true,
+    },
+  },
+  mappings = {
   defaults = {
     path_display = { "truncate" },
-    mappings = {
       n = {
         ["q"] = actions.close,
       },
