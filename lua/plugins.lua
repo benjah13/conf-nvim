@@ -44,8 +44,10 @@ return require("packer").startup(function(use)
     "kosayoda/nvim-lightbulb",
     requires = "antoinemadec/FixCursorHold.nvim",
   }
+  use "VidocqH/lsp-lens.nvim"
 
   -- editor structure
+  use "m4xshen/hardtime.nvim"
   use "nvim-lua/plenary.nvim" -- Common utilities
   use {
     "nvim-neo-tree/neo-tree.nvim",
@@ -71,6 +73,7 @@ return require("packer").startup(function(use)
   use "nvim-lualine/lualine.nvim" -- Statusline
   use "stevearc/dressing.nvim"
   use "kyazdani42/nvim-web-devicons" -- File icons
+  use "karb94/neoscroll.nvim"
 
   -- treesitter
   use {

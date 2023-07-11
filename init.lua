@@ -20,3 +20,5 @@ autocmd("TextYankPost", {
 })
 
 vim.cmd "colorscheme catppuccin-macchiato"
+vim.cmd "set foldmethod=indent"
+vim.cmd "set foldlevel=99"

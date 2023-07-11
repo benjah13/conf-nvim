@@ -54,3 +54,13 @@ keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv", { silent = true })
 
 -- LazyGit
 keymap.set("n", "<leader>gg", ":LazyGit<Return>", { silent = true })
+
+-- try hard mode
+keymap.set("n", "<Up>", "", { silent = true })
+keymap.set("n", "<Down>", "", { silent = true })
+keymap.set("n", "<Left>", "", { silent = true })
+keymap.set("n", "<Right>", "", { silent = true })
+
+-- fold
+keymap.set("n", "f", ":foldclose<Return>", { silent = true })
+keymap.set("n", "ff", ":foldopen<Return>", { silent = true })

@@ -165,10 +165,10 @@ local no_errors, error_msg = pcall(function()
       path = "/Users/buleonbenjamin/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
       url = "https://github.com/lewis6991/gitsigns.nvim",
     },
-    ["gruvbox-material"] = {
+    ["hardtime.nvim"] = {
       loaded = true,
-      path = "/Users/buleonbenjamin/.local/share/nvim/site/pack/packer/start/gruvbox-material",
-      url = "https://github.com/sainnhe/gruvbox-material",
+      path = "/Users/buleonbenjamin/.local/share/nvim/site/pack/packer/start/hardtime.nvim",
+      url = "https://github.com/m4xshen/hardtime.nvim",
     },
     ["indent-blankline.nvim"] = {
       loaded = true,
@@ -179,6 +179,11 @@ local no_errors, error_msg = pcall(function()
       loaded = true,
       path = "/Users/buleonbenjamin/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
       url = "https://github.com/kdheepak/lazygit.nvim",
+    },
+    ["lsp-lens.nvim"] = {
+      loaded = true,
+      path = "/Users/buleonbenjamin/.local/share/nvim/site/pack/packer/start/lsp-lens.nvim",
+      url = "https://github.com/VidocqH/lsp-lens.nvim",
     },
     ["lsp_signature.nvim"] = {
       loaded = true,
@@ -195,11 +200,6 @@ local no_errors, error_msg = pcall(function()
       path = "/Users/buleonbenjamin/.local/share/nvim/site/pack/packer/start/lualine.nvim",
       url = "https://github.com/nvim-lualine/lualine.nvim",
     },
-    ["lush.nvim"] = {
-      loaded = true,
-      path = "/Users/buleonbenjamin/.local/share/nvim/site/pack/packer/start/lush.nvim",
-      url = "https://github.com/rktjmp/lush.nvim",
-    },
     ["mason-lspconfig.nvim"] = {
       loaded = true,
       path = "/Users/buleonbenjamin/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -210,15 +210,15 @@ local no_errors, error_msg = pcall(function()
       path = "/Users/buleonbenjamin/.local/share/nvim/site/pack/packer/start/mason.nvim",
       url = "https://github.com/williamboman/mason.nvim",
     },
-    ["melange-nvim"] = {
-      loaded = true,
-      path = "/Users/buleonbenjamin/.local/share/nvim/site/pack/packer/start/melange-nvim",
-      url = "https://github.com/savq/melange-nvim",
-    },
     ["neo-tree.nvim"] = {
       loaded = true,
       path = "/Users/buleonbenjamin/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
       url = "https://github.com/nvim-neo-tree/neo-tree.nvim",
+    },
+    ["neoscroll.nvim"] = {
+      loaded = true,
+      path = "/Users/buleonbenjamin/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
+      url = "https://github.com/karb94/neoscroll.nvim",
     },
     ["nightfox.nvim"] = {
       loaded = true,
@@ -347,11 +347,6 @@ local no_errors, error_msg = pcall(function()
       loaded = true,
       path = "/Users/buleonbenjamin/.local/share/nvim/site/pack/packer/start/which-key.nvim",
       url = "https://github.com/folke/which-key.nvim",
-    },
-    ["zenbones.nvim"] = {
-      loaded = true,
-      path = "/Users/buleonbenjamin/.local/share/nvim/site/pack/packer/start/zenbones.nvim",
-      url = "https://github.com/mcchrish/zenbones.nvim",
     },
   }
 

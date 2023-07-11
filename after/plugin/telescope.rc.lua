@@ -1,3 +1,4 @@
+local trouble = require "trouble.providers.telescope"
 local status, telescope = pcall(require, "telescope")
 if not status then
   return
@@ -15,9 +16,11 @@ telescope.setup {
       enable_preview = true,
     },
   },
-  mappings = {
   defaults = {
     path_display = { "truncate" },
+    mappings = {
+      i = { ["<c-t>"] = trouble.open_with_trouble },
+      n = { ["<c-t>"] = trouble.open_with_trouble },
       n = {
         ["q"] = actions.close,
       },
@@ -94,8 +97,13 @@ local keymap = vim.keymap.set
 local tb = require "telescope.builtin"
 local opts = { noremap = true, silent = true }
 
-keymap("n", "<C-f>", ":Telescope live_grep<cr>", opts)
-keymap("v", "<C-f>", function()
+keymap(
+  "n",
+  "<leader>st",
+  ":lua require('telescope.builtin').grep_string({ search = vim.fn.input('Grep For > ')})<cr>",
+  opts
+)
+keymap("v", "<leader>st", function()
   local text = vim.getVisualSelection()
   tb.grep_string { search = text }
 end, opts)
