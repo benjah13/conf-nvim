@@ -10,7 +10,9 @@ return require("packer").startup(function(use)
   use "navarasu/onedark.nvim"
   use "EdenEast/nightfox.nvim"
   use "sainnhe/edge"
-
+  use 'martinsione/darkplus.nvim'
+  use "askfiy/visual_studio_code"
+  use 'tomasiser/vim-code-dark'
   -- telescope
   use "nvim-telescope/telescope.nvim"
   use "nvim-telescope/telescope-file-browser.nvim"
@@ -74,6 +76,7 @@ return require("packer").startup(function(use)
   use "stevearc/dressing.nvim"
   use "kyazdani42/nvim-web-devicons" -- File icons
   use "karb94/neoscroll.nvim"
+  use 'nvim-pack/nvim-spectre'
 
   -- treesitter
   use {
