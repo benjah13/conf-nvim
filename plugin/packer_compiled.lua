@@ -142,7 +142,7 @@ _G.packer_plugins = {
   ["darkplus.nvim"] = {
     loaded = true,
     path = "/Users/buleonbenjamin/.local/share/nvim/site/pack/packer/start/darkplus.nvim",
-    url = "https://github.com/martinsione/darkplus.nvim"
+    url = "https://github.com/lunarvim/darkplus.nvim"
   },
   ["dressing.nvim"] = {
     loaded = true,
@@ -287,7 +287,7 @@ _G.packer_plugins = {
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/Users/buleonbenjamin/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
-    url = "https://github.com/kyazdani42/nvim-web-devicons"
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["onedark.nvim"] = {
     loaded = true,
@@ -348,11 +348,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/buleonbenjamin/.local/share/nvim/site/pack/packer/start/vim-illuminate",
     url = "https://github.com/RRethy/vim-illuminate"
-  },
-  visual_studio_code = {
-    loaded = true,
-    path = "/Users/buleonbenjamin/.local/share/nvim/site/pack/packer/start/visual_studio_code",
-    url = "https://github.com/askfiy/visual_studio_code"
   },
   ["which-key.nvim"] = {
     config = { "\27LJ\2\nD\0\0\2\0\4\0\t6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0K\0\1\0\15timeoutlen\ftimeout\6o\bvim\0" },
