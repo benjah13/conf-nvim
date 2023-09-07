@@ -65,6 +65,6 @@ keymap.set("n", "f", ":foldclose<Return>", { silent = true })
 keymap.set("n", "ff", ":foldopen<Return>", { silent = true })
 
 -- spectre
-vim.keymap.set('n', '<leader>sr', '<cmd>lua require("spectre").toggle()<CR>', {
-    desc = "Toggle Spectre"
+vim.keymap.set("n", "<leader>sr", '<cmd>lua require("spectre").toggle()<CR>', {
+  desc = "Toggle Spectre",
 })

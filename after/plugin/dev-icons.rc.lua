@@ -1,28 +1,28 @@
 require("nvim-web-devicons").set_icon {
-   ['e2e-test.ts'] = {
+  ["e2e-test.ts"] = {
     icon = "",
     color = "#ff7f00",
-    name = "TsTest"
-  }
+    name = "TsTest",
+  },
 }
 require("nvim-web-devicons").set_icon {
-   ['intg-test.ts'] = {
+  ["intg-test.ts"] = {
     icon = "",
     color = "#ff7f00",
-    name = "TsTest"
-  }
+    name = "TsTest",
+  },
 }
 require("nvim-web-devicons").set_icon {
-   ['test.ts'] = {
+  ["test.ts"] = {
     icon = "",
     color = "#ff7f00",
-    name = "TsTest"
-  }
+    name = "TsTest",
+  },
 }
 require("nvim-web-devicons").set_icon {
-   ['test.tsx'] = {
+  ["test.tsx"] = {
     icon = "",
     color = "#ff7f00",
-    name = "TsTest"
-  }
+    name = "TsTest",
+  },
 }

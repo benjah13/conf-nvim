@@ -10,7 +10,7 @@ return require("packer").startup(function(use)
   use "navarasu/onedark.nvim"
   use "EdenEast/nightfox.nvim"
   use "sainnhe/edge"
-  use 'tomasiser/vim-code-dark'
+  use "tomasiser/vim-code-dark"
   use "lunarvim/darkplus.nvim"
 
   -- telescope
@@ -47,6 +47,7 @@ return require("packer").startup(function(use)
     requires = "antoinemadec/FixCursorHold.nvim",
   }
   use "VidocqH/lsp-lens.nvim"
+  use "filipdutescu/renamer.nvim"
 
   -- editor structure
   use "m4xshen/hardtime.nvim"
@@ -54,7 +55,7 @@ return require("packer").startup(function(use)
   use {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
-    requires = { 
+    requires = {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
@@ -76,7 +77,7 @@ return require("packer").startup(function(use)
   use "nvim-lualine/lualine.nvim" -- Statusline
   use "stevearc/dressing.nvim"
   use "karb94/neoscroll.nvim"
-  use 'nvim-pack/nvim-spectre'
+  use "nvim-pack/nvim-spectre"
 
   -- treesitter
   use {
@@ -99,11 +100,8 @@ return require("packer").startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use "numToStr/Comment.nvim"
   use "RRethy/vim-illuminate"
-  use "eandrju/cellular-automaton.nvim"
   use "windwp/nvim-ts-autotag"
 
   -- to keep ?
   use "norcalli/nvim-colorizer.lua"
-  use "akinsho/nvim-bufferline.lua"
-  use "kylechui/nvim-surround"
 end)
