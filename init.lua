@@ -19,6 +19,6 @@ autocmd("TextYankPost", {
   end,
 })
 
-vim.cmd "colorscheme darkplus"
+vim.cmd "colorscheme codedark"
 vim.cmd "set foldmethod=indent"
 vim.cmd "set foldlevel=99"

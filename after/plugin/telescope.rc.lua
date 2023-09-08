@@ -40,8 +40,8 @@ telescope.setup {
   },
 }
 
-telescope.load_extension "fzf"
 telescope.load_extension "ui-select"
+require('telescope').load_extension('fzf')
 
 -- lsp stuff
 -- vim.keymap.set("n", "gr", function()

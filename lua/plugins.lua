@@ -1,107 +1,118 @@
-vim.cmd [[packadd packer.nvim]]
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
 
-return require("packer").startup(function(use)
-  -- package manager i
-  use "wbthomason/packer.nvim"
 
+vim.opt.rtp:prepend(lazypath)
+
+
+return require("lazy").setup({
   -- colorschemes
-  use { "catppuccin/nvim", as = "catppuccin" }
-  use "folke/tokyonight.nvim"
-  use "navarasu/onedark.nvim"
-  use "EdenEast/nightfox.nvim"
-  use "sainnhe/edge"
-  use "tomasiser/vim-code-dark"
-  use "lunarvim/darkplus.nvim"
+   { "catppuccin/nvim", as = "catppuccin" },
+   "folke/tokyonight.nvim",
+   "navarasu/onedark.nvim",
+   "EdenEast/nightfox.nvim",
+   "sainnhe/edge",
+   "tomasiser/vim-code-dark",
+   "lunarvim/darkplus.nvim",
 
   -- telescope
-  use "nvim-telescope/telescope.nvim"
-  use "nvim-telescope/telescope-file-browser.nvim"
-  use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
-  use "nvim-telescope/telescope-ui-select.nvim"
-  use "nvim-telescope/telescope-live-grep-args.nvim"
-  use "windwp/nvim-autopairs"
+   "nvim-telescope/telescope.nvim",
+   "nvim-telescope/telescope-file-browser.nvim",
+   { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+   "nvim-telescope/telescope-ui-select.nvim",
+   "nvim-telescope/telescope-live-grep-args.nvim",
+  "windwp/nvim-autopairs",
 
   -- alpha
-  use "goolord/alpha-nvim"
+   "goolord/alpha-nvim",
 
   -- copilot
-  use "github/copilot.vim"
+   "github/copilot.vim",
 
   -- cmp
-  use "hrsh7th/cmp-nvim-lsp"
-  use "hrsh7th/cmp-buffer"
-  use "hrsh7th/cmp-path"
-  use "hrsh7th/cmp-cmdline"
-  use "hrsh7th/nvim-cmp"
-  use "saadparwaiz1/cmp_luasnip"
+   "hrsh7th/cmp-nvim-lsp",
+   "hrsh7th/cmp-buffer",
+   "hrsh7th/cmp-path",
+   "hrsh7th/cmp-cmdline",
+   "hrsh7th/nvim-cmp",
+   "saadparwaiz1/cmp_luasnip",
 
   -- lsp
-  use "neovim/nvim-lspconfig"
-  use "onsails/lspkind-nvim" -- vscode-like pictograms
-  use "williamboman/mason.nvim"
-  use "williamboman/mason-lspconfig.nvim"
-  use { "L3MON4D3/LuaSnip", run = "make install_jsregexp" }
-  use "ray-x/lsp_signature.nvim"
-  use {
+  "neovim/nvim-lspconfig",
+   "onsails/lspkind-nvim", -- vscode-like pictograms
+   "williamboman/mason.nvim",
+   "williamboman/mason-lspconfig.nvim",
+   { "L3MON4D3/LuaSnip", run = "make install_jsregexp" },
+   "ray-x/lsp_signature.nvim",
+   {
     "kosayoda/nvim-lightbulb",
-    requires = "antoinemadec/FixCursorHold.nvim",
-  }
-  use "VidocqH/lsp-lens.nvim"
-  use "filipdutescu/renamer.nvim"
+    dependencies = { "antoinemadec/FixCursorHold.nvim" },
+  },
+   "VidocqH/lsp-lens.nvim",
+   "filipdutescu/renamer.nvim",
 
   -- editor structure
-  use "m4xshen/hardtime.nvim"
-  use "nvim-lua/plenary.nvim" -- Common utilities
-  use {
+   "m4xshen/hardtime.nvim",
+   "nvim-lua/plenary.nvim" ,-- Common utilities
+   {
     "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    requires = {
+    version = "v3.x",
+    dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
     },
-  }
+  },
 
-  use "romgrk/barbar.nvim"
-  use {
+   "romgrk/barbar.nvim",
+   {
     "folke/trouble.nvim",
-    requires = { "nvim-tree/nvim-web-devicons" },
-  }
-  use {
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+   {
     "folke/which-key.nvim",
     config = function()
       vim.o.timeout = true
       vim.o.timeoutlen = 300
     end,
-  }
-  use "nvim-lualine/lualine.nvim" -- Statusline
-  use "stevearc/dressing.nvim"
-  use "karb94/neoscroll.nvim"
-  use "nvim-pack/nvim-spectre"
+  },
+   "nvim-lualine/lualine.nvim", -- Statusline
+   "stevearc/dressing.nvim",
+   "karb94/neoscroll.nvim",
+   "nvim-pack/nvim-spectre",
 
   -- treesitter
-  use {
+   {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
-  }
-  use "nvim-treesitter/nvim-treesitter-context"
+  },
+   "nvim-treesitter/nvim-treesitter-context",
 
   -- git
-  use "dinhhuy258/git.nvim" -- For git blame & browse
-  use "lewis6991/gitsigns.nvim" -- OPTIONAL: for git status
-  use {
+   "dinhhuy258/git.nvim", -- For git blame & browse
+   "lewis6991/gitsigns.nvim", -- OPTIONAL: for git status
+   {
     "kdheepak/lazygit.nvim",
-    requires = {
+    dependencies = {
       "nvim-lua/plenary.nvim",
     },
-  }
+  },
 
   -- code stuffs
-  use "lukas-reineke/indent-blankline.nvim"
-  use "numToStr/Comment.nvim"
-  use "RRethy/vim-illuminate"
-  use "windwp/nvim-ts-autotag"
+   "lukas-reineke/indent-blankline.nvim",
+   "numToStr/Comment.nvim",
+   "RRethy/vim-illuminate",
+  "windwp/nvim-ts-autotag",
 
   -- to keep ?
-  use "norcalli/nvim-colorizer.lua"
-end)
+  "norcalli/nvim-colorizer.lua"
+})
