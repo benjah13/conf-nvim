@@ -42,9 +42,6 @@ keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
--- NeoTree
-keymap.set("n", "<leader>e", ":Neotree toggle<Return>", { silent = true })
-
 -- Move lines
 keymap.set("n", "<C-j>", ":m .+1<CR>==", { silent = true })
 keymap.set("n", "<C-k>", ":m .-2<CR>==", { silent = true })

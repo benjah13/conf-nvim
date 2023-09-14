@@ -11,14 +11,12 @@ mason.setup {}
 
 lspconfig.setup {
   ensure_installed = {
-    "gopls",
-    "dockerls",
     "graphql",
     "html",
     "jsonls",
-    "rust_analyzer",
-    "sqlls",
     "tailwindcss",
     "yamlls",
+    "tsserver",
+    "lua",
   },
 }

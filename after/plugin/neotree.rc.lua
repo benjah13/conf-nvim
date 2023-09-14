@@ -216,4 +216,7 @@ require("neo-tree").setup {
   },
 }
 
+-- NeoTree
+vim.keymap.set("n", "<leader>e", ":Neotree toggle<Return>", { silent = true })
+
 vim.cmd [[nnoremap \ :Neotree reveal<cr>]]

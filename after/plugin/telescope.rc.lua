@@ -18,6 +18,14 @@ telescope.setup {
   },
   defaults = {
     path_display = { "truncate" },
+    file_ignore_patterns = {
+      "node_modules",
+      "build",
+      "dist",
+      "yarn.lock",
+      ".git",
+      ".next",
+    },
     mappings = {
       i = { ["<c-t>"] = trouble.open_with_trouble },
       n = { ["<c-t>"] = trouble.open_with_trouble },
@@ -41,15 +49,15 @@ telescope.setup {
 }
 
 telescope.load_extension "ui-select"
-require('telescope').load_extension('fzf')
+require("telescope").load_extension "fzf"
 
 -- lsp stuff
--- vim.keymap.set("n", "gr", function()
---   builtin.lsp_references {
---     show_line = false,
---   }
--- end)
---
+vim.keymap.set("n", "gr", function()
+  builtin.lsp_references {
+    show_line = false,
+  }
+end)
+
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "[C]ode [A]ctions" })
 vim.keymap.set("n", "<leader>cd", vim.diagnostic.open_float, { desc = "[C]ode [D]iagnostics" })
 vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, { desc = "[C]ode [R]ename" })
@@ -76,7 +84,7 @@ vim.keymap.set("n", "<leader>gf", builtin.git_files, { desc = "Search [G]it [F]i
 vim.keymap.set(
   "n",
   "<Leader>sf",
-  ':lua require"telescope.builtin".find_files({ hidden = true })<CR>',
+  ':lua require"telescope.builtin".find_files({ hidden = true, no_ignore = true })<CR>',
   { noremap = true, silent = true, desc = "[S]earch [F]iles" }
 )
 vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
