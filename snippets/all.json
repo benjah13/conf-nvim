@@ -13,5 +13,26 @@
         "prefix": "error",
         "body": ["console.error($1);", "$0"],
         "description": "Log error to the console"
+    }, 
+    "Query from DDD": {
+        "prefix": "query",
+        "body": [
+          "import { Query, QueryHandler, QueryType } from '@gojob/ddd';",
+          "", 
+          "@QueryType('$1Query')",
+          "export class $1Query extends Query<'$1Query'> { ",
+          " constructor(public readonly $1: $FIELDTYPE$) { ",
+          "   super();",
+          " }",
+          "}",
+          "", 
+          "export class $1QueryHandler implements QueryHandler<$1Query> { ",
+          " readonly on = [$1Query]; ",
+          " async execute(query: $1Query) {",
+          "   return ; ",
+          " }",
+          "}"
+        ],
+        "description": "Query from DDD"
     }
 }

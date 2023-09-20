@@ -1,5 +1,5 @@
 require("lsp-lens").setup {
-  enable = true,
+  enable = false,
   include_declaration = false, -- Reference include declaration
   sections = { -- Enable / Disable specific request
     definition = false,
@@ -7,6 +7,6 @@ require("lsp-lens").setup {
     implementation = false,
   },
   ignore_filetype = {
-    -- "prisma",
+    -- "typescript",
   },
 }

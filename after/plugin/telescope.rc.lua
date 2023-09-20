@@ -14,7 +14,7 @@ telescope.setup {
   pickers = {
     colorscheme = {
       enable_preview = true,
-    },
+    }
   },
   defaults = {
     path_display = { "truncate" },
@@ -23,7 +23,7 @@ telescope.setup {
       "build",
       "dist",
       "yarn.lock",
-      ".git",
+      ".git/",
       ".next",
     },
     mappings = {
@@ -49,7 +49,8 @@ telescope.setup {
 }
 
 telescope.load_extension "ui-select"
-require("telescope").load_extension "fzf"
+telescope.load_extension "fzf"
+telescope.load_extension "advanced_git_search"
 
 -- lsp stuff
 vim.keymap.set("n", "gr", function()
@@ -84,7 +85,7 @@ vim.keymap.set("n", "<leader>gf", builtin.git_files, { desc = "Search [G]it [F]i
 vim.keymap.set(
   "n",
   "<Leader>sf",
-  ':lua require"telescope.builtin".find_files({ hidden = true, no_ignore = true })<CR>',
+  ':lua require"telescope.builtin".find_files({ hidden = true })<CR>',
   { noremap = true, silent = true, desc = "[S]earch [F]iles" }
 )
 vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
@@ -119,3 +120,4 @@ keymap("v", "<leader>st", function()
   local text = vim.getVisualSelection()
   tb.grep_string { search = text }
 end, opts)
+

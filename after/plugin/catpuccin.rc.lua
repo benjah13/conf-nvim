@@ -35,7 +35,7 @@ require("catppuccin").setup {
     gitgutter = true,
     mason = true,
     treesitter = true,
-    treesitter_context = true,
+    treesitter_context = false,
     telescope = true,
   },
   color_overrides = {},

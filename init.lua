@@ -3,6 +3,7 @@ require "highlights"
 require "maps"
 require "macos"
 require "plugins"
+require "current-theme"
 
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
@@ -19,6 +20,5 @@ autocmd("TextYankPost", {
   end,
 })
 
-vim.cmd "colorscheme codedark"
 vim.cmd "set foldmethod=indent"
 vim.cmd "set foldlevel=99"

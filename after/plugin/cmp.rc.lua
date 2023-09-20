@@ -8,6 +8,11 @@ cmp.setup {
       require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
     end,
   },
+  view = {
+    entries = {
+      follow_cursor = true,
+    }
+  },
   window = {
     documentation = cmp.config.window.bordered {
       winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None",
