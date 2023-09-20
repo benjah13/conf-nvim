@@ -95,13 +95,13 @@ nvim_lsp.tsserver.setup {
   cmd = { "typescript-language-server", "--stdio" },
   capabilities = capabilities,
   handlers = handlers,
-  init_options = {
-    preferences = {
+  -- init_options = {
+--    preferences = {
       -- other preferences...
-      importModuleSpecifierPreference = "relative",
-      importModuleSpecifierEnding = "minimal",
-    },
-  },
+      -- importModuleSpecifierPreference = "relative",
+      -- importModuleSpecifierEnding = "minimal",
+  ---  },
+  -- },
 }
 
 nvim_lsp.eslint.setup {
