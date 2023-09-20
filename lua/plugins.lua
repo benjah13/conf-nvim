@@ -28,7 +28,8 @@ return require("lazy").setup {
   "nvim-telescope/telescope-ui-select.nvim",
   "nvim-telescope/telescope-live-grep-args.nvim",
   "windwp/nvim-autopairs",
-
+  "aaronhallaert/advanced-git-search.nvim",
+  
   -- alpha
   "goolord/alpha-nvim",
 
@@ -95,6 +96,8 @@ return require("lazy").setup {
 
   -- git
   "dinhhuy258/git.nvim", -- For git blame & browse
+  "tpope/vim-fugitive",
+  "sindrets/diffview.nvim",
   "lewis6991/gitsigns.nvim", -- OPTIONAL: for git status
   {
     "kdheepak/lazygit.nvim",
